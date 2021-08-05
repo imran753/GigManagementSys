@@ -8,10 +8,10 @@ namespace GigManagementSystem.Repositories
 {
     public interface IUserCalendarRepository
     {
-        List<UserCalendar> GetUserCalender();
-        List<UserCalendar> GetUserCalendarBy(string EmailId);
-        void AddCalendar(UserCalendar usercalendar);
-        void DeleteCalendar(string EmailId);
-        void UpdateCalendar(UserCalendar usercalendar);
+        List<UserCalendar> GetUserCalender();//get all calendar details
+        List<UserCalendar> GetUserCalendarBy(string EmailId);//get calendar detials by emailid
+        void AddCalendar(UserCalendar usercalendar);//add calendar
+        void DeleteCalendar(string EmailId);//delete calendar
+        void UpdateCalendar(UserCalendar usercalendar);//update calendar
     }
 }

@@ -31,6 +31,7 @@ namespace GigManagementSystem
             services.AddControllers();
             services.AddTransient<IArtistRegistrationRepository, ArtistRegistrationRepository>();
             services.AddTransient<IUserRegistrationRepository, UserRegistrationRepository>();
+            //dependency injection for user calendar
             services.AddTransient<IUserCalendarRepository,UserCalendarRepository>();
             services.AddTransient<IGigDetailRepository, GigDetailRepository>();
             services.AddTransient<IFollowingRepository, FollowingRepository>();

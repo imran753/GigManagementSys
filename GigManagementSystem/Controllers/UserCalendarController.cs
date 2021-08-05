@@ -13,6 +13,7 @@ namespace GigManagementSystem.Controllers
     [ApiController]
     public class UserCalendarController : ControllerBase
     {
+        //object declaration
         private IUserCalendarRepository calendar;
         public UserCalendarController(IUserCalendarRepository calendar)
         {
@@ -33,6 +34,7 @@ namespace GigManagementSystem.Controllers
         {
             return calendar.GetUserCalendarBy(EmailId);
         }
+        //add a new calendar
         [HttpPost]
         [Route("AddCalendar")]
         public string AddCalendar(UserCalendar usercalendar)
@@ -40,6 +42,7 @@ namespace GigManagementSystem.Controllers
             calendar.AddCalendar(usercalendar);
             return "Registered Succesfully";
         }
+        //delete calendar entries by email id
         [HttpDelete]
         [Route("DeleteUser/{EmailId}")]
         public string DeleteCalendar(string EmailId)
@@ -47,6 +50,7 @@ namespace GigManagementSystem.Controllers
             calendar.DeleteCalendar(EmailId);
             return "Deleted";
         }
+        //update calendar entries
         [HttpPut]
         [Route("UpdateCalendar")]
         public string UpdateCalendar(UserCalendar usercalendar)
