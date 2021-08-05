@@ -19,12 +19,14 @@ namespace GigManagementSystem.Controllers
             this.calendar = calendar;
         }
         //calendar methods
+        //get all calendars
         [HttpGet]
         [Route("GetAllUsersCalendars")]
         public List<UserCalendar> GetUserCalender()
         {
             return calendar.GetUserCalender();
         }
+        //get all calendars by email
         [HttpGet]
         [Route("GetUserCalendarByEmail/{EmailId}")]
         public List<UserCalendar> GetUserCalendarBy(string EmailId)
